@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.compressapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_companyFragment"
+            app:destination="@id/companyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_clientFragment"
+            app:destination="@id/clientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyFragment"
+        android:name="com.example.compressapp.CompanyFragment"
+        android:label="fragment_company"
+        tools:layout="@layout/fragment_company" />
+    <fragment
+        android:id="@+id/clientFragment"
+        android:name="com.example.compressapp.ClientFragment"
+        android:label="fragment_client"
+        tools:layout="@layout/fragment_client" >
+        <action
+            android:id="@+id/action_clientFragment_to_companyFragment"
+            app:destination="@id/companyFragment" />
+    </fragment>
+</navigation>
